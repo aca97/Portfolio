@@ -130,7 +130,6 @@ function FlamingoModel() {
 
   return (
     <Container>
-
       <div ref={containerRef} />
     </Container>
   )

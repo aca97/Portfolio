@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Skills from "./Skills";
+import FlamingoModel from "./FlamingoModel";
 
-const Container = styled.div`
-
-`;
+const Container = styled.div``;
 
 const Title = styled.h1`
   border-radius: 15px;
@@ -40,11 +39,27 @@ const Year = styled.p`
   font-weight: bold;
 `;
 
+const Main = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const Img = styled.img`
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+`
+
 function About() {
   return (
     <Container>
+      <FlamingoModel />
       <Title>Hello, welcome to my portfolio</Title>
+      <Main>
       <P>My name is Aleksandar Hadzic & I'm Web app Frontend developer</P>
+      <Img src="./img/prof.jpeg" />
+      </Main>
       <Section>
         <SubTitle>Biography</SubTitle>
         <Bio>
@@ -57,13 +72,11 @@ function About() {
           <Year>2021 to present</Year>
           <P>Working at Kirey group as Software developer (Angular)</P>
         </Bio>
-
         <SubTitle>I♥</SubTitle>
         <Bio>
           <P>Digital Art, Music, Chess & Waterpolo</P>
         </Bio>
       </Section>
-      <Skills />
     </Container>
   );
 }

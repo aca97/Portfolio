@@ -13,9 +13,7 @@ const Card = styled.div``;
 
 const Img = styled.img``;
 
-const CardTitle = styled.h3`
-    
-`
+const CardTitle = styled.h3``;
 
 function Projects() {
   return (
@@ -23,7 +21,7 @@ function Projects() {
       <Title>Projects</Title>
       <Card>
         <Img src=""></Img>
-      <CardTitle>PokemonDex :(</CardTitle>
+        <CardTitle>PokemonDex :(</CardTitle>
       </Card>
 
       <p>Tech stack</p>

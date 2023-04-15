@@ -1,21 +1,19 @@
-import FlamingoModel from "./components/FlamingoModel";
-import Skills from "./components/Skills";
 import Navbar from "./components/Navbar";
-
-import "./App.css";
-import About from "./components/About";
-import Projects from "./components/Projects";
+import { Route, Routes } from "react-router-dom";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
+
+import "./App.css";
 
 function App() {
   return (
     <>
       <Navbar />
-      <FlamingoModel />
-      <About />
-      <Projects />
-      <Contact />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </>
   );

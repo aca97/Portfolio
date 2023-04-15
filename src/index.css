@@ -1,5 +1,5 @@
 :root {
-  font-family: "IBM Plex Mono", monospace;
+  font-family: "IBM Plex Mono", monospace !important;
   color: rgb(255, 255, 255);
   background-color: #242424;
 }

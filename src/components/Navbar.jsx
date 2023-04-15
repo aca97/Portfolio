@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const Section = styled.div`
   display: flex;
@@ -16,7 +18,6 @@ const Container = styled.div`
 const Links = styled.div`
   display: flex;
   align-items: center;
-  gap: 30px;
 `;
 
 const Logo = styled.p`
@@ -24,31 +25,30 @@ const Logo = styled.p`
   cursor: pointer;
 `;
 
-const List = styled.ul`
-  display: flex;
-  gap: 20px;
-  list-style: none;
-`;
-
-const ListItem = styled.li`
-  font-size: 24px;
+const Button = styled.button`
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #ffff;
+  font-weight: 100;
+  font-size: 20px;
 `;
-
-const Img = styled.img`
-  width: 35px;
-`
-
 function Navbar() {
+  const navigate = useNavigate();
+
+  function goToHome() {
+    navigate("/");
+  }
+  function goToContact() {
+    navigate("/contact");
+  }
   return (
     <Section>
       <Container>
         <Logo>A.Hadzic</Logo>
         <Links>
-          <List>
-            <ListItem>Home</ListItem>
-            <ListItem>Contact</ListItem>
-          </List>
+          <Button onClick={goToHome}>About</Button>
+          <Button onClick={goToContact}>Contact</Button>
         </Links>
       </Container>
     </Section>

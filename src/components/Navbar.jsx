@@ -11,7 +11,6 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0px;
 `;
 
 const Links = styled.div`
@@ -20,8 +19,9 @@ const Links = styled.div`
   gap: 30px;
 `;
 
-const Logo = styled.h2`
+const Logo = styled.p`
   height: 50px;
+  cursor: pointer;
 `;
 
 const List = styled.ul`
@@ -31,26 +31,25 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
-font-size: 24px;
-cursor: pointer;
+  font-size: 24px;
+  cursor: pointer;
 `;
 
-
+const Img = styled.img`
+  width: 35px;
+`
 
 function Navbar() {
   return (
     <Section>
       <Container>
-          <Logo>A.Hadzic</Logo>
+        <Logo>A.Hadzic</Logo>
         <Links>
           <List>
             <ListItem>Home</ListItem>
-            <ListItem>Work</ListItem>
-            <ListItem>Skills</ListItem>
             <ListItem>Contact</ListItem>
           </List>
         </Links>
-    
       </Container>
     </Section>
   );

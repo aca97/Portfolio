@@ -25,7 +25,7 @@ function FlamingoModel() {
       1,
       5000
     );
-    camera.position.set(0, 0, 100);
+    camera.position.set(0, 0, 120);
 
     scene = new THREE.Scene();
     scene.fog = new THREE.Fog(scene.background, 1, 5000);
@@ -71,7 +71,7 @@ function FlamingoModel() {
 
       const s = 0.35;
       mesh.scale.set(s, s, s);
-      mesh.position.y = -2;
+      mesh.position.y = -1;
       mesh.rotation.y = -1;
 
       mesh.castShadow = true;

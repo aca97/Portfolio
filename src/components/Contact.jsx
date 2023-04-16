@@ -50,7 +50,10 @@ const Button = styled.button`
   padding: 20px;
 `;
 const Right = styled.div`
-
+flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 function Contact() {

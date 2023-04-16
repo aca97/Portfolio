@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Skills from "./Skills";
 import FlamingoModel from "./FlamingoModel";
 
 const Container = styled.div``;
@@ -17,15 +16,7 @@ const P = styled.p`
   padding: 0px 10px;
 `;
 
-const Button = styled.button``;
-
-const Image = styled.img``;
-
 const Section = styled.div``;
-
-const Flex = styled.div`
-  display: flex;
-`;
 
 const Bio = styled.div`
   display: grid;

@@ -17,6 +17,7 @@ const Container = styled.div`
 const Links = styled.div`
   display: flex;
   align-items: center;
+  list-style-type: none;
 `;
 
 const Logo = styled.p`
@@ -24,7 +25,8 @@ const Logo = styled.p`
   cursor: pointer;
 `;
 
-const Button = styled.button`
+const Button = styled.li`
+  margin: 0 5px;
   cursor: pointer;
   border: none;
   background-color: transparent;
@@ -46,10 +48,20 @@ function Navbar() {
   return (
     <Section>
       <Container>
-        <Logo>A.Hadzic</Logo>
+        <Logo onClick={() => handleClick("about")}>A.Hadzic</Logo>
         <Links>
-          <Button isActive={activeLink === "about"} onClick={() => handleClick("about")}>About</Button>
-          <Button isActive={activeLink === "contact"} onClick={() => handleClick("contact")}>Contact</Button>
+          <Button
+            isActive={activeLink === "about"}
+            onClick={() => handleClick("about")}
+          >
+            About
+          </Button>
+          <Button
+            isActive={activeLink === "contact"}
+            onClick={() => handleClick("contact")}
+          >
+            Contact
+          </Button>
         </Links>
       </Container>
     </Section>

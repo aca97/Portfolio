@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import styled from "styled-components";
 import reactLogo from "../assets/react.svg";
 import viteLogo from "../assets/vite.svg";
@@ -8,7 +8,10 @@ import tsLogo from "../assets/typescript.svg";
 import angularLogo from "../assets/angular.svg";
 
 const Container = styled.div`
+
+@media (min-width:960px) {
   display: flex;
+}
 `;
 const Title = styled.h1`
   font-size: 26px;

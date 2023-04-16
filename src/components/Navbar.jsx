@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 
@@ -29,26 +28,28 @@ const Button = styled.button`
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: #ffff;
-  font-weight: 100;
+  color: ${({ isActive }) => (isActive ? "#ffff" : "#999999")};
+  font-weight: ${({ isActive }) => (isActive ? "bold" : "100")};
   font-size: 20px;
+  text-decoration: ${({ isActive }) => (isActive ? "underline" : "none")};
 `;
+
 function Navbar() {
   const navigate = useNavigate();
+  const [activeLink, setActiveLink] = useState("about");
 
-  function goToHome() {
-    navigate("/");
+  function handleClick(link) {
+    setActiveLink(link);
+    navigate(link === "about" ? "/" : "/contact");
   }
-  function goToContact() {
-    navigate("/contact");
-  }
+
   return (
     <Section>
       <Container>
         <Logo>A.Hadzic</Logo>
         <Links>
-          <Button onClick={goToHome}>About</Button>
-          <Button onClick={goToContact}>Contact</Button>
+          <Button isActive={activeLink === "about"} onClick={() => handleClick("about")}>About</Button>
+          <Button isActive={activeLink === "contact"} onClick={() => handleClick("contact")}>Contact</Button>
         </Links>
       </Container>
     </Section>

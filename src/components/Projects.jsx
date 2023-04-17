@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { AiFillGithub } from "react-icons/ai";
 
 const Section = styled.div`
   margin: 50px 0;
@@ -16,39 +17,51 @@ const Title = styled.h1`
 `;
 
 const Card = styled.div`
-width: 400px;
+  width: 350px;
   border: 1px solid #5f5f5f;
   border-radius: 12px;
 `;
 
 const Img = styled.img`
   width: 150px;
+  height: 150px;
 `;
 
 const CardTitle = styled.h3``;
 
 const A = styled.a`
-  color: #73abf9;
-  font-size: 20px;
+  color: #8ef511;
+  font-size: 18px;
   text-decoration: none;
+  margin-top: 15px;
 `;
+const Git = styled.a`
+  color: #ffff;
+  font-size: 30px;
+`
 const Flex = styled.div`
-  display: flex ;
+  display: flex;
   margin: 0 15px;
 `;
 const FlexBot = styled.div`
   margin: 0 15px;
   display: flex;
   justify-content: space-between;
-`
+`;
 const Tech = styled.p`
-background-color: #121212;
   color: #8ef511;
   margin-right: 10px;
+  font-size: 12px;
 `;
 const Stack = styled.p`
   color: #f99d47;
+  font-size: 12px;
 `;
+
+const P = styled.p`
+  font-size: 12px;
+`;
+
 function Projects() {
   return (
     <Section>
@@ -61,7 +74,9 @@ function Projects() {
             <Tech>Tech stack: </Tech>
             <Stack> Vite + React + TypeScript</Stack>
           </Flex>
-          <p>This project is creating for exercice working with API's and React</p>
+          <P>
+            This project is created for exercice working with API's and React
+          </P>
           <FlexBot>
             <A
               href="https://pokemon-4e5zz97fj-flatronw2.vercel.app/"
@@ -69,9 +84,43 @@ function Projects() {
             >
               Live
             </A>
-            <h3> code  </h3>
+
+            <Git
+              href="https://pokemon-4e5zz97fj-flatronw2.vercel.app/"
+              target="_blank"
+            >
+              <AiFillGithub />
+            </Git>
           </FlexBot>
-        </Card>       
+        </Card>
+        <Card>
+          <CardTitle>Library</CardTitle>
+          <Img src="./img/books.jpeg" alt="books"></Img>
+          <Flex>
+            <Tech>Tech stack: </Tech>
+            <Stack> React, Spring boot 3, PostgreSQL</Stack>
+          </Flex>
+          <P>
+            Library app has authentication & authorization with JWT token,
+            backend is build with java 17 & Gradle while frontend is build with
+            React and yarn packet manager
+          </P>
+          <FlexBot>
+            {/* <A
+              href="https://pokemon-4e5zz97fj-flatronw2.vercel.app/"
+              target="_blank"
+            >
+              Live
+            </A> */}
+            <div></div>
+            <Git
+              href="https://github.com/aleksa0001/library"
+              target="_blank"
+            >
+              <AiFillGithub />
+            </Git>
+          </FlexBot>
+        </Card>
       </Container>
     </Section>
   );

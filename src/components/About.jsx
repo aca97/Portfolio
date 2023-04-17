@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import FlamingoModel from "./FlamingoModel";
 
-const Container = styled.div``;
+const Container = styled.div`
+
+`;
 
 const Title = styled.h1`
   border-radius: 15px;
@@ -57,9 +59,9 @@ function About() {
           <Year>1997</Year>
           <P>Born in Sombor, Serbia 🌳</P>
           <Year>2017 - 2021</Year>
-          <P>Bachlor degree Information technoligy, "Mihajlo Pupin" </P>
+          <P>Bachelor's degree Information technology, University in Novi Sad, Tehnical faculty "Mihajlo Pupin" Zrenjanin </P>
           <Year>2021 - 2022</Year>
-          <P>Masters degree Information technology, "Mihajlo Pupin" </P>
+          <P>Master's degree Information technology, University in Novi Sad, Tehnical faculty "Mihajlo Pupin" Zrenjanin</P>
           <Year>2021 to present</Year>
           <P>Working at Kirey group as Software developer (Angular)</P>
         </Bio>

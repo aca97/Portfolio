@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import { GrSun } from "react-icons/gr";
 
 const Section = styled.div`
   display: flex;
   justify-content: center;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(55, 55, 55, 0.5);
+  backdrop-filter: blur(5px);
 `;
 
 const Container = styled.div`
@@ -22,6 +29,8 @@ const Links = styled.div`
 
 const Logo = styled.p`
   height: 50px;
+  display: flex;
+  align-items: center;
   cursor: pointer;
 `;
 
@@ -34,6 +43,17 @@ const Button = styled.li`
   font-weight: ${({ isActive }) => (isActive ? "bold" : "100")};
   font-size: 20px;
   text-decoration: ${({ isActive }) => (isActive ? "underline" : "none")};
+`;
+
+const ThemeButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30%;
+  border: none;
+  font-size: 34px;
+  color: white;
+  cursor: pointer;
 `;
 
 function Navbar() {
@@ -63,6 +83,9 @@ function Navbar() {
             Contact
           </Button>
         </Links>
+        <ThemeButton>
+          <GrSun />
+        </ThemeButton>
       </Container>
     </Section>
   );

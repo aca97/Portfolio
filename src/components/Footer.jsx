@@ -7,14 +7,9 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   background-color: #333333;
 `;
 
-const Img = styled.img`
-  width: 25px;
-  height: 25px;
-`;
 const Right = styled.div`
   display: flex;
   align-items: center;
@@ -26,12 +21,28 @@ const Right = styled.div`
 `;
 const Small = styled.p`
   margin-right: 10px;
- 
 `;
+
+const Flex = styled.div`
+width: 15%;
+  display: flex;
+  justify-content: space-around;
+`
+
 function Footer() {
   return (
     <Container>
-      <div></div>
+      <Flex>
+        <h2>
+          F
+        </h2>
+        <h2>
+          F
+        </h2>
+        <h2>
+          L
+        </h2>
+      </Flex>
 
       <p>© 2023 Aleksandar Hadzic. All Rights Reserved.</p>
 

@@ -10,6 +10,10 @@ const Container = styled.div`
   width: 100%;
   display: flex;
   gap: 20px;
+  @media (max-width: 960px) {
+    display: grid;
+    justify-content: center;
+  }
 `;
 
 const Title = styled.h1`
@@ -20,6 +24,7 @@ const Card = styled.div`
   width: 350px;
   border: 1px solid #5f5f5f;
   border-radius: 12px;
+  height: 400px;
 `;
 
 const Img = styled.img`
@@ -35,10 +40,11 @@ const A = styled.a`
   text-decoration: none;
   margin-top: 15px;
 `;
+
 const Git = styled.a`
   color: #ffff;
   font-size: 30px;
-`
+`;
 const Flex = styled.div`
   display: flex;
   margin: 0 15px;
@@ -59,6 +65,7 @@ const Stack = styled.p`
 `;
 
 const P = styled.p`
+  text-align: justify;
   font-size: 12px;
 `;
 
@@ -75,7 +82,9 @@ function Projects() {
             <Stack> Vite + React + TypeScript</Stack>
           </Flex>
           <P>
-            This project is created for exercice working with API's and React
+            This project is created for exercice, to practise React.js & working
+            with API's. It's created with Vite, TypeScript and Yarn packet
+            manager
           </P>
           <FlexBot>
             <A
@@ -103,20 +112,11 @@ function Projects() {
           <P>
             Library app has authentication & authorization with JWT token,
             backend is build with java 17 & Gradle while frontend is build with
-            React and yarn packet manager
+            React.js and yarn packet manager
           </P>
           <FlexBot>
-            {/* <A
-              href="https://pokemon-4e5zz97fj-flatronw2.vercel.app/"
-              target="_blank"
-            >
-              Live
-            </A> */}
             <div></div>
-            <Git
-              href="https://github.com/aleksa0001/library"
-              target="_blank"
-            >
+            <Git href="https://github.com/aleksa0001/library" target="_blank">
               <AiFillGithub />
             </Git>
           </FlexBot>

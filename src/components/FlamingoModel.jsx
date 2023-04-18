@@ -6,7 +6,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 const Container = styled.div`
   display: flex;
   justify-content: center;
-`
+`;
 
 function FlamingoModel() {
   const containerRef = useRef(null);
@@ -29,7 +29,7 @@ function FlamingoModel() {
 
     scene = new THREE.Scene();
     scene.fog = new THREE.Fog(scene.background, 1, 5000);
-    scene.background = new THREE.Color('#242424');
+    scene.background = new THREE.Color("#242424");
 
     // LIGHTS
 
@@ -88,7 +88,7 @@ function FlamingoModel() {
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth / 3, window.innerHeight / 3);
+    renderer.setSize(window.innerWidth , window.innerHeight );
     container.appendChild(renderer.domElement);
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.shadowMap.enabled = true;
@@ -99,7 +99,7 @@ function FlamingoModel() {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
 
-      renderer.setSize(window.innerWidth , window.innerHeight );
+      renderer.setSize(window.innerWidth, window.innerHeight);
     }
 
     window.addEventListener("resize", onWindowResize);
@@ -132,7 +132,7 @@ function FlamingoModel() {
     <Container>
       <div ref={containerRef} />
     </Container>
-  )
+  );
 }
 
 export default FlamingoModel;

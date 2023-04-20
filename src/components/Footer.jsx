@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { BiGitBranch } from "react-icons/bi";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillFacebook } from "react-icons/ai";
+import { AiFillInstagram } from "react-icons/ai";
 
 const Container = styled.div`
   height: 50px;
@@ -24,23 +27,24 @@ const Small = styled.p`
 `;
 
 const Flex = styled.div`
-width: 15%;
+  width: 15%;
   display: flex;
   justify-content: space-around;
-`
+  text-align: center;
+`;
 
 function Footer() {
   return (
     <Container>
       <Flex>
         <h2>
-          F
+          <AiFillLinkedin />
         </h2>
         <h2>
-          F
+          <AiFillFacebook />
         </h2>
         <h2>
-          L
+          <AiFillInstagram />
         </h2>
       </Flex>
 

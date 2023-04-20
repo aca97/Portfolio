@@ -4,10 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { GrSun } from "react-icons/gr";
 
 const Section = styled.div`
-  display: flex;
-  justify-content: center;
-  height: 50px;
-  position: fixed;
+  position: sticky;
   top: 0;
   z-index: 1;
   background-color: rgba(55, 55, 55, 0.5);
@@ -15,7 +12,6 @@ const Section = styled.div`
 `;
 
 const Container = styled.div`
-  width: 1000px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,7 +24,6 @@ const Links = styled.div`
 `;
 
 const Logo = styled.p`
-  height: 50px;
   display: flex;
   align-items: center;
   cursor: pointer;

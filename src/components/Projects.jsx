@@ -67,6 +67,7 @@ const Stack = styled.p`
 const P = styled.p`
   text-align: justify;
   font-size: 12px;
+  margin: 0 15px;
 `;
 
 function Projects() {

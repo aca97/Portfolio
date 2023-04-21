@@ -21,7 +21,7 @@ function FlamingoModel() {
 
     camera = new THREE.PerspectiveCamera(
       30,
-      window.innerWidth / window.innerHeight,
+      500 / 300,
       1,
       5000
     );
@@ -35,7 +35,6 @@ function FlamingoModel() {
 
     const hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.6);
     hemiLight.color.setHSL(0.6, 1, 0.6);
-    hemiLight.groundColor.setHSL(0.095, 1, 0.75);
     hemiLight.position.set(0, 50, 0);
     scene.add(hemiLight);
 
@@ -88,21 +87,21 @@ function FlamingoModel() {
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth , window.innerHeight );
+    renderer.setSize(500 , 300 );
     container.appendChild(renderer.domElement);
     renderer.outputEncoding = THREE.sRGBEncoding;
     renderer.shadowMap.enabled = true;
 
     //
 
-    function onWindowResize() {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
+    //function onWindowResize() {
+      // camera.aspect = 500 / 300;
+      // camera.updateProjectionMatrix();
 
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    }
+      // renderer.setSize(500, 300);
+    //}
 
-    window.addEventListener("resize", onWindowResize);
+    //window.addEventListener("resize", onWindowResize);
 
     function animate() {
       requestAnimationFrame(animate);
@@ -124,7 +123,7 @@ function FlamingoModel() {
     return () => {
       container.removeChild(renderer.domElement);
 
-      window.removeEventListener("resize", onWindowResize);
+      //window.removeEventListener("resize", onWindowResize);
     };
   }, []);
 

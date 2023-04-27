@@ -30,7 +30,7 @@ const Map = () => {
         }
       </Geographies>
       <Annotation
-        subject={[21.0059, 44.0165 ]}
+        subject={[20.0059, 45.0165 ]}
         dx={-90}
         dy={-75}
         connectorProps={{

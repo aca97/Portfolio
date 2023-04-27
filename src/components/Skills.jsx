@@ -44,7 +44,7 @@ const Img = styled.img`
   height: 400px;
   object-fit: contain;
   margin: auto;
-  filter: drop-shadow(0 0 2em #ff911ced);
+  filter: drop-shadow(0 0 2em #1c91ffec);
   animation: animate 2s infinite ease alternate;
 
   @keyframes animate {

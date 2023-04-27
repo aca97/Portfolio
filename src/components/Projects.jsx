@@ -25,6 +25,7 @@ const Card = styled.div`
   border: 1px solid #5f5f5f;
   border-radius: 12px;
   height: 400px;
+  position: relative; /* Set parent position to relative */
 `;
 
 const Img = styled.img`
@@ -40,10 +41,17 @@ const A = styled.a`
   text-decoration: none;
   margin-top: 15px;
 `;
+const A2 = styled.a`
+  color: #898989;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 15px;
+`;
 
 const Git = styled.a`
   color: #ffff;
   font-size: 30px;
+  margin-left: 300%;
 `;
 const Flex = styled.div`
   display: flex;
@@ -53,6 +61,8 @@ const FlexBot = styled.div`
   margin: 0 15px;
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  bottom: 0;
 `;
 const Tech = styled.p`
   color: #8ef511;
@@ -96,9 +106,27 @@ function Projects() {
             </A>
 
             <Git
-              href="https://pokemon-4e5zz97fj-flatronw2.vercel.app/"
+              href="https://github.com/aleksa0001/pokemon-dex"
               target="_blank"
             >
+              <AiFillGithub />
+            </Git>
+          </FlexBot>
+        </Card>
+        <Card>
+          <CardTitle>Portfolio</CardTitle>
+          <Img src="./img/port.png" alt="pokemon"></Img>
+          <Flex>
+            <Tech>Tech stack: </Tech>
+            <Stack> Vite + React, Three.js</Stack>
+          </Flex>
+          <P>Created for with React.js and Three.js.</P>
+          <FlexBot>
+            <A href="https://aca-hadzic.vercel.app/" target="_blank">
+              Live
+            </A>
+
+            <Git href="https://github.com/aleksa0001/Portfolio" target="_blank">
               <AiFillGithub />
             </Git>
           </FlexBot>
@@ -116,7 +144,9 @@ function Projects() {
             React.js and yarn packet manager
           </P>
           <FlexBot>
-            <div></div>
+          <A2 href="">
+              Live
+            </A2>
             <Git href="https://github.com/aleksa0001/library" target="_blank">
               <AiFillGithub />
             </Git>

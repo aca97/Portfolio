@@ -80,10 +80,39 @@ const P = styled.p`
   margin: 0 15px;
 `;
 
+const Video = styled.video`
+  width: 50%;
+  height: 400px;
+  margin: 15px;
+`;
+const Source = styled.source``;
+
+const VideoDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 function Projects() {
   return (
     <Section>
       <Title>Projects</Title>
+      <VideoDiv>
+        <div className="div">
+          <CardTitle>Track Financial</CardTitle>
+          <P>
+            This project is created for exercise to practice Spring Boot 3 and
+            working with databases. The web app is designed for tracking your
+            money flow, where each user has their own account. If a user doesn't
+            have an account, they can create one and add their incomes,
+            expenses. User can also see list of all incomes & expenses and
+            delete them in table
+          </P>
+        </div>
+        <Video  controls autoplay  muted>
+          <Source src="./img/moneytrack.mov" type="video/mp4" />
+        </Video>
+      </VideoDiv>
       <Container>
         <Card>
           <CardTitle>PokemonDex</CardTitle>
@@ -144,9 +173,7 @@ function Projects() {
             React.js and yarn packet manager
           </P>
           <FlexBot>
-          <A2 href="">
-              Live
-            </A2>
+            <A2 href="">Live</A2>
             <Git href="https://github.com/aleksa0001/library" target="_blank">
               <AiFillGithub />
             </Git>

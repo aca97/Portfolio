@@ -59,9 +59,9 @@ function About() {
           <Year>1997</Year>
           <P>Born in Sombor, Serbia 🌳</P>
           <Year>2017 - 2021</Year>
-          <P>Bachelor's degree Information technology, University in Novi Sad, Tehnical faculty "Mihajlo Pupin" Zrenjanin </P>
+          <P>Bachelor's degree Information technology, University in Novi Sad, Tehnical faculty "Mihajlo Pupin" Zrenjanin 💻</P>
           <Year>2021 - 2022</Year>
-          <P>Master's degree Information technology, University in Novi Sad, Tehnical faculty "Mihajlo Pupin" Zrenjanin</P>
+          <P>Master's degree Information technology, University in Novi Sad, Tehnical faculty "Mihajlo Pupin" Zrenjanin 💻</P>
           <Year>2021 to present</Year>
           <P>Working at Kirey group as Software developer (Angular)</P>
         </Bio>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import { AiFillGithub } from "react-icons/ai";
 
@@ -68,6 +68,7 @@ const Tech = styled.p`
   color: #8ef511;
   margin-right: 10px;
   font-size: 12px;
+  height: 30px;
 `;
 const Stack = styled.p`
   color: #f99d47;
@@ -81,9 +82,9 @@ const P = styled.p`
 `;
 
 const Video = styled.video`
-  width: 50%;
-  height: 400px;
-  margin: 15px;
+  width: 100%;
+  height: 390px;
+  margin: 0 10px;
 `;
 const Source = styled.source``;
 
@@ -91,9 +92,39 @@ const VideoDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #5f5f5f;
+  border-radius: 12px;
+  margin: 10px 0;
+  @media (max-width: 960px) {
+    display: grid;
+    justify-content: center;
+  }
+`;
+
+const FullscreenImage = styled.img`
+  margin: 8px;
+  width: 100%;
+  height: 170px;
+  &:hover {
+    cursor: pointer;
+  }
+  @media (max-width: 960px) {
+    width: 50%;
+  }
 `;
 
 function Projects() {
+  const imageRef = useRef(null);
+
+  const toggleFullscreen = () => {
+    const element = imageRef.current;
+
+    if (document.fullscreenElement) {
+      document.exitFullscreen();
+    } else {
+      element.requestFullscreen();
+    }
+  };
   return (
     <Section>
       <Title>Projects</Title>
@@ -108,8 +139,14 @@ function Projects() {
             expenses. User can also see list of all incomes & expenses and
             delete them in table
           </P>
+          <FullscreenImage
+            src="./img/swagger.png"
+            alt="swagger"
+            ref={imageRef}
+            onClick={toggleFullscreen}
+          />
         </div>
-        <Video  controls autoplay  muted>
+        <Video controls autoplay muted>
           <Source src="./img/moneytrack.mov" type="video/mp4" />
         </Video>
       </VideoDiv>
@@ -149,7 +186,9 @@ function Projects() {
             <Tech>Tech stack: </Tech>
             <Stack> Vite + React, Three.js</Stack>
           </Flex>
-          <P>Created for with React.js and Three.js.</P>
+          <P>
+            Portfolio is created for exercice purpose
+          </P>
           <FlexBot>
             <A href="https://aca-hadzic.vercel.app/" target="_blank">
               Live

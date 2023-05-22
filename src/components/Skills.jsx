@@ -6,6 +6,9 @@ import vueLogo from "../assets/vue.svg";
 import jsLogo from "../assets/javascript.svg";
 import tsLogo from "../assets/typescript.svg";
 import angularLogo from "../assets/angular.svg";
+import javaLogo from "../assets/java.svg";
+import psql from "../assets/psql.svg";
+import spring from "../assets/spring.svg";
 
 const Container = styled.div`
 
@@ -20,7 +23,7 @@ const List = styled.a`
   font-size: small;
 `;
 const Logo = styled.img`
-  height: 4em;
+  height: 5em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
@@ -79,6 +82,17 @@ function Skills() {
           </List>
           <List href="https://vuejs.org/" target="_blank">
             <Logo src={vueLogo} alt="Vue logo" />
+          </List>
+        </div>
+        <div>
+          <List href="" target="_blank">
+            <Logo src={javaLogo} className="logo-java" alt="java logo" />
+          </List>
+          <List href="" target="_blank">
+            <Logo src={psql} alt="psql logo" />
+          </List>
+          <List href="" target="_blank">
+            <Logo src={spring} alt="spring logo" />
           </List>
         </div>
       </Left>

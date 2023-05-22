@@ -8,8 +8,20 @@ const Section = styled.div`
 
 const Container = styled.div`
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+  @media (max-width: 960px) {
+    display: grid;
+    justify-content: center;
+  }
+`;
+const ContainerTop = styled.div`
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 25px 0;
   @media (max-width: 960px) {
     display: grid;
     justify-content: center;
@@ -21,7 +33,7 @@ const Title = styled.h1`
 `;
 
 const Card = styled.div`
-  width: 350px;
+  width: 100%;
   border: 1px solid #5f5f5f;
   border-radius: 12px;
   height: 400px;
@@ -88,69 +100,59 @@ const Video = styled.video`
 `;
 const Source = styled.source``;
 
-const VideoDiv = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #5f5f5f;
-  border-radius: 12px;
-  margin: 10px 0;
-  @media (max-width: 960px) {
-    display: grid;
-    justify-content: center;
-  }
-`;
 
-const FullscreenImage = styled.img`
-  margin: 8px;
-  width: 100%;
-  height: 170px;
-  &:hover {
-    cursor: pointer;
-  }
-  @media (max-width: 960px) {
-    width: 50%;
-  }
-`;
+
 
 function Projects() {
-  const imageRef = useRef(null);
 
-  const toggleFullscreen = () => {
-    const element = imageRef.current;
-
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-    } else {
-      element.requestFullscreen();
-    }
-  };
   return (
     <Section>
       <Title>Projects</Title>
-      <VideoDiv>
-        <div className="div">
-          <CardTitle>Track Financial</CardTitle>
-          <P>
-            This project is created for exercise to practice Spring Boot 3 and
-            working with databases. The web app is designed for tracking your
-            money flow, where each user has their own account. If a user doesn't
-            have an account, they can create one and add their incomes,
-            expenses. User can also see list of all incomes & expenses and
-            delete them in table
-          </P>
-          <FullscreenImage
-            src="./img/swagger.png"
-            alt="swagger"
-            ref={imageRef}
-            onClick={toggleFullscreen}
-          />
-        </div>
+  
+      <ContainerTop>
+
         <Video controls autoplay muted>
           <Source src="./img/moneytrack.mov" type="video/mp4" />
         </Video>
-      </VideoDiv>
+        <div className="div">
+
+        <CardTitle>Track Financial</CardTitle>
+        <P>
+            This project is created for exercise to practice Spring Boot 3 and
+            working with databases. The web app is designed for tracking your
+            money flow, where each user has their own account. If a user doesn't
+            have an account, they can create one and add their incomes &
+            expenses. User can also see list of all incomes & expenses and
+            delete them in table, which will auto remove that income or expense 
+            from account balance
+          </P>
+        </div>
+        
+      </ContainerTop>
       <Container>
+        <Card>
+          <CardTitle>Day Tracking</CardTitle>
+          <Img src="./img/img.png" alt="img"></Img>
+          <Flex>
+            <Tech>Tech stack: </Tech>
+            <Stack>Spring boot, Angular & PostgreSQL</Stack>
+          </Flex>
+          <P>
+            This project is created for exercice, to practise Java, spring boot & working
+            with database. This web app is for tracking day activity. Please checkout github
+            repository for code and details about project.
+          </P>
+          <FlexBot>
+          <A2 href="">Live</A2>
+
+            <Git
+              href="https://github.com/aca97/day-tracking"
+              target="_blank"
+            >
+              <AiFillGithub />
+            </Git>
+          </FlexBot>
+        </Card>
         <Card>
           <CardTitle>PokemonDex</CardTitle>
           <Img src="./img/bulb.png" alt="pokemon"></Img>

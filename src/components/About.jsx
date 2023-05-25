@@ -62,7 +62,7 @@ function About() {
           <P>Bachelor's degree Information technology, University in Novi Sad, Tehnical faculty "Mihajlo Pupin" Zrenjanin 💻</P>
           <Year>2021 - 2022</Year>
           <P>Master's degree Information technology, University in Novi Sad, Tehnical faculty "Mihajlo Pupin" Zrenjanin 💻</P>
-          <Year>2021 to present</Year>
+          <Year>2022 to present</Year>
           <P>Working at Kirey group as Software developer (Angular)</P>
         </Bio>
         <SubTitle>I♥</SubTitle>
